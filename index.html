@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign in &middot; To Your Hometown Bank</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+@import url("http://fonts.googleapis.com/css?family=Berkshire+Swash");    
+@import url("http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css");
+    * {
+      padding : 0;
+      margin  : 0;
+      border  : 0;
+      outline : 0;
+      font-family: Arial;
+    }
+
+    body {
+      background:url(http://thomaskinkadegallery.businesscatalyst.com/media/images/christmas/large/hometown-christmas-memories-large.jpg) #917975;
+      padding-top      : 50px;
+    }
+
+    form {
+      position : relative;
+      min-width  : 300px;
+      min-height : 360px;
+      border-radius : 5px;
+      margin : 25px auto;
+      background-color: #e3e3e3;
+      border-top : 1px solid #f1f1f1;
+      box-shadow : 0 0 0 1px #626262 , 0 0 0 6px rgba(150,150,150,.5) , 0 0 0 7px #cbbdbc , 0 0 0 8px #78495b;
+      text-align : center;
+    }
+
+    h1 {
+      margin     : 10px 0 20px 0;
+      font-size  : 40px;
+      color      : #b8b8b8;
+      font-family: 'Berkshire Swash', cursive;
+      text-shadow: 1px 1px 0 #888 , 2px 2px 0 #ccc; 
+    }
+
+    input {
+      display    : block;
+      height     : 48px;
+      margin     : 0 auto 17px;
+      text-align : center;
+      width      : 266px;
+      border-radius : 5px;
+    }
+
+    .user , .pass {
+      font-size      : 20px;
+      background: -moz-linear-gradient(top,  rgba(213,213,213,1) 0%, rgba(213,213,213,1) 13%, rgba(215,215,215,1) 30%, rgba(222,222,222,1) 71%, rgba(221,221,221,1) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(213,213,213,1)), color-stop(13%,rgba(213,213,213,1)), color-stop(30%,rgba(215,215,215,1)), color-stop(71%,rgba(222,222,222,1)), color-stop(100%,rgba(221,221,221,1))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(213,213,213,1) 0%,rgba(213,213,213,1) 13%,rgba(215,215,215,1) 30%,rgba(222,222,222,1) 71%,rgba(221,221,221,1) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  rgba(213,213,213,1) 0%,rgba(213,213,213,1) 13%,rgba(215,215,215,1) 30%,rgba(222,222,222,1) 71%,rgba(221,221,221,1) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  rgba(213,213,213,1) 0%,rgba(213,213,213,1) 13%,rgba(215,215,215,1) 30%,rgba(222,222,222,1) 71%,rgba(221,221,221,1) 100%); /* IE10+ */
+
+      box-shadow: inset 0 0 3px 1px #ccc; 
+
+      border-top : 1px solid #aaa;
+      border-bottom : 1px solid #eee;
+
+      color          : #555;
+    }
+
+    .btn {
+      margin-bottom : 30px;
+      color         : #fefefe;
+      text-shadow   : 0 1px 0 #777;
+      border        : 1px solid #b6733c;
+      box-shadow    : inset 0 0 1px 1px #ffcb9c;
+      text-transform : uppercase;
+      background: -moz-linear-gradient(top,  rgba(249,159,107,1) 0%, rgba(238,148,96,1) 57%, rgba(236,146,94,1) 89%, rgba(232,144,94,1) 94%, rgba(234,146,96,1) 96%, rgba(244,161,111,1) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(249,159,107,1)), color-stop(57%,rgba(238,148,96,1)), color-stop(89%,rgba(236,146,94,1)), color-stop(94%,rgba(232,144,94,1)), color-stop(96%,rgba(234,146,96,1)), color-stop(100%,rgba(244,161,111,1))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(249,159,107,1) 0%,rgba(238,148,96,1) 57%,rgba(236,146,94,1) 89%,rgba(232,144,94,1) 94%,rgba(234,146,96,1) 96%,rgba(244,161,111,1) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  rgba(249,159,107,1) 0%,rgba(238,148,96,1) 57%,rgba(236,146,94,1) 89%,rgba(232,144,94,1) 94%,rgba(234,146,96,1) 96%,rgba(244,161,111,1) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  rgba(249,159,107,1) 0%,rgba(238,148,96,1) 57%,rgba(236,146,94,1) 89%,rgba(232,144,94,1) 94%,rgba(234,146,96,1) 96%,rgba(244,161,111,1) 100%); /* IE10+ */
+
+      font-size      : 17px;
+    }
+
+    .btn:hover {
+      cursor : pointer;
+      background: -moz-linear-gradient(top,  rgba(244,161,111,1) 0%, rgba(234,146,96,1) 4%, rgba(232,144,94,1) 6%, rgba(236,146,94,1) 12%, rgba(238,148,96,1) 43%, rgba(249,159,107,1) 100%); /* FF3.6+ */
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(244,161,111,1)), color-stop(4%,rgba(234,146,96,1)), color-stop(6%,rgba(232,144,94,1)), color-stop(12%,rgba(236,146,94,1)), color-stop(43%,rgba(238,148,96,1)), color-stop(100%,rgba(249,159,107,1))); /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top,  rgba(244,161,111,1) 0%,rgba(234,146,96,1) 4%,rgba(232,144,94,1) 6%,rgba(236,146,94,1) 12%,rgba(238,148,96,1) 43%,rgba(249,159,107,1) 100%); /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top,  rgba(244,161,111,1) 0%,rgba(234,146,96,1) 4%,rgba(232,144,94,1) 6%,rgba(236,146,94,1) 12%,rgba(238,148,96,1) 43%,rgba(249,159,107,1) 100%); /* Opera 11.10+ */
+      background: -ms-linear-gradient(top,  rgba(244,161,111,1) 0%,rgba(234,146,96,1) 4%,rgba(232,144,94,1) 6%,rgba(236,146,94,1) 12%,rgba(238,148,96,1) 43%,rgba(249,159,107,1) 100%); /* IE10+ */
+    }
+
+    .user:focus , .pass:focus {
+      box-shadow    : inset 0 0 1px 1px #ffcb9c;
+      border        : 1px solid #b6733c;
+      -webkit-transition    : all .2s ease-in;
+      -moz-transition       : all .2s ease-in;
+    }
+
+    hr {
+      height : 1px;
+      width  : 270px;
+      margin : auto;
+    }
+
+    h5 {
+      margin-top : 10px;
+      color      : #7d7d7d;
+    }
+
+    a {
+      text-transform  : capitalize;
+      text-decoration : none;
+      color  : #4e4e4e;
+    }
+
+    ::-webkit-input-placeholder {
+       color          : #929292;
+       font-size      : 17px;
+       text-transform : uppercase;
+    }
+
+    :-moz-placeholder {  
+       color          : #929292;
+       font-size      : 17px;
+       text-transform : uppercase;
+    }
+
+
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+<form action="">
+  
+  <h1>Hometown Bank</h1>
+  
+  <input class="user" type="text"     name="name"     placeholder="Ben McWhoosit" />
+  <input class="pass" type="password" name="password" placeholder="********" />
+    <hr style="background-color : #bebebe;"/>
+  <hr style="background-color : #FFF; "/><br />
+  <input class="btn"  type="submit"   name="submit"   value="SIGN IN" />
+  
+  <hr style="background-color : #bebebe;"/>
+  <hr style="background-color : #FFF; "/>
+  
+  <h5>Remember Password is  <a href="">ON</a></h5>
+  
+  
+</form>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
