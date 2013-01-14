@@ -41,16 +41,16 @@ Ext.define('honeybank.view.Login', {
                                 disabled: true,
                                 required: true
                             },
-                            {
-		                          xtype: 'checkboxfield',
-		                          itemId: 'remPwCheckBox',
-		                          name: 'remPwCheckBox',
-		                          label: 'Remember',
-		                          disabled: true,
-		                          required: false
-		                      }
                         ]
                     },
+                    {
+                          xtype: 'checkboxfield',
+                          itemId: 'remPwCheckBox',
+                          name: 'remPwCheckBox',
+                          label: 'Remember',
+                          disabled: true,
+                          required: false
+                      },
                     {
                         xtype: 'button',
                         itemId: 'logInButton',

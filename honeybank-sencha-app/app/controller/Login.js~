@@ -81,7 +81,7 @@ Ext.define('honeybank.controller.Login', {
         mainView = this.getMain();
         loginView.setMasked(false);
 
-        Ext.Viewport.animateActiveItem(mainView, this.getSlideLeftTransition());
+        Ext.Viewport.animateActiveItem(mainMenuView, this.getSlideLeftTransition());
     },
 
     singInFailure: function (message) {
