@@ -10,7 +10,7 @@ Ext.define('honeybank.view.Main', {
 
         items: [
             {
-                title: 'First Run',
+                title: 'Accounts',
                 iconCls: 'home',
 
                 styleHtmlContent: true,
@@ -29,8 +29,44 @@ Ext.define('honeybank.view.Main', {
                 ].join("")
             },
             {
-                title: 'How it works',
+                title: 'Transfer',
                 iconCls: 'action',
+
+                styleHtmlContent: true,
+                scrollable: true,
+
+                items: {
+                    docked: 'top',
+                    xtype: 'titlebar',
+                    title: 'Honey Bank'
+                },
+
+                html: [
+                    "<h3>Transfer money to someone else...</h3>",
+                    "ACH transfer. Provide account details form & pick from their accounts."
+                ].join("")
+            },
+            {
+                title: 'Contact Us',
+                iconCls: 'compose',
+
+                styleHtmlContent: true,
+                scrollable: true,
+
+                items: {
+                    docked: 'top',
+                    xtype: 'titlebar',
+                    title: 'Honey Bank'
+                },
+
+                html: [
+                    "<h3>Contact Us...</h3>",
+                    "Or maybe not."
+                ].join("")
+            },
+            {
+                title: 'Settings',
+                iconCls: 'settings',
 
                 items: [
                     {

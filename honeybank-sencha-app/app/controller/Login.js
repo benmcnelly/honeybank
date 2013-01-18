@@ -46,7 +46,7 @@ Ext.define('honeybank.controller.Login', {
             message: 'Signing In...'
         });
         
-        me.signInSuccess();
+        me.signInSuccess(); //skip right to logging in, username/pw are "saved"
         return;
 
         Ext.Ajax.request({
